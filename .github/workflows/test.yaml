@@ -3,7 +3,7 @@ name: Hello world
 on:
   workflow_dispatch:
 
-job: 
+jobs: 
 　　　　test:
     name: test-hello
     steps:
