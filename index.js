@@ -12,7 +12,7 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
-  core.info('this is info');
+  core.warning('this is info');
 } catch (error) {
   core.setFailed(error.message);
 }
