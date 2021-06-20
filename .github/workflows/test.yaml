@@ -1,0 +1,13 @@
+name: Hello world
+
+on:
+  workflow_dispatch:
+
+job: 
+　　　　test:
+    name: test-hello
+    steps:
+      - use: takinaga-dev/show-results-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
+    
