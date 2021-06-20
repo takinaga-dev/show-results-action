@@ -4,10 +4,11 @@ on:
   workflow_dispatch:
 
 jobs: 
-　　　　test:
+  test:
     name: test-hello
+    runs-on: ubuntu-latest
     steps:
-      - use: takinaga-dev/show-results-action@main
+      - uses: takinaga-dev/show-results-action@main
         with:
           who-to-greet: 'Mona the Octocat'
     
