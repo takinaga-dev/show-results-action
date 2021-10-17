@@ -4,6 +4,7 @@ const github = require('@actions/github');
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
+  const githubToken = core.getInput('token')
   console.log(`Hello ${nameToGreet}!`);
 
   const time = (new Date()).toTimeString();
@@ -14,7 +15,7 @@ try {
   // console.log(`The event payload: ${payload}`);
   core.warning('refer to http://yahoo.co.jp');
 
-  const octokit = github.getOctokit("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")
+  const octokit = github.getOctokit(githubToken)
 
   octokit.rest.repos.listForOrg({
     org: "Jij-Inc",
