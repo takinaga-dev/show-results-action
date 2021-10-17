@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const { Octokit } = require("@octokit/rest")
+
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
@@ -14,7 +14,7 @@ try {
   // console.log(`The event payload: ${payload}`);
   core.warning('refer to http://yahoo.co.jp');
 
-  const octokit = new Octokit();
+  const octokit = github.getOctokit()
 
   octokit.rest.repos.listForOrg({
     org: "Jij-Inc",
