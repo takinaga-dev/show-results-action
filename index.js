@@ -14,7 +14,7 @@ try {
   // console.log(`The event payload: ${payload}`);
   core.warning('refer to http://yahoo.co.jp');
 
-  const octokit = github.getOctokit()
+  const octokit = github.getOctokit("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")
 
   octokit.rest.repos.listForOrg({
     org: "Jij-Inc",
