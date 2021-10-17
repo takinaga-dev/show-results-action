@@ -14,5 +14,5 @@ jobs:
       - uses: takinaga-dev/show-results-action@main
         with:
           who-to-greet: 'Mona the Octocat'
-          token: ${{ GITHUBTOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
     
