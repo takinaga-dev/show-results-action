@@ -16,12 +16,15 @@ try {
   core.warning('refer to http://yahoo.co.jp');
 
   const octokit = github.getOctokit(githubToken)
+  
 
   octokit.rest.repos.listForOrg({
     org: "Jij-Inc",
     type: "public"
   }).then(({data}) => {
     console.log(data);
+  }).catch(e => {
+    console.log(e)
   })
 } catch (error) {
   core.setFailed(error.message);
