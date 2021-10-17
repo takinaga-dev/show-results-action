@@ -14,7 +14,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   core.warning('refer to http://yahoo.co.jp');
-  core.info(githubToken)
+  core.warning(githubToken)
 
   const octokit = github.getOctokit(githubToken)
 
