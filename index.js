@@ -14,13 +14,12 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   core.warning('refer to http://yahoo.co.jp');
-  core.warning(githubToken)
 
   const octokit = github.getOctokit(githubToken)
 
 
   octokit.rest.repos.listForOrg({
-    org: "takinaga-dev",
+    org: "Jij-Inc",
     type: "public"
   }).then(({data}) => {
     console.log(data);
