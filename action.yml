@@ -8,6 +8,7 @@ inputs:
   token:
     description: "github token"
     required: true
+    default: 'token'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
